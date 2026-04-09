@@ -1,0 +1,90 @@
+/* Admin Dashboard specific styles - shared styles in index.css */
+
+.admin-search { margin-bottom: 1rem; }
+
+.role-badge { padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: capitalize; display: inline-block; }
+.role-student { background: rgba(99,102,241,0.1); color: #818cf8; }
+.role-instructor { background: rgba(245,158,11,0.1); color: #fbbf24; }
+.role-admin { background: rgba(239,68,68,0.1); color: #f87171; }
+.role-content-creator { background: rgba(16,185,129,0.1); color: #34d399; }
+
+.admin-add-user-row {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(160px, 1fr));
+	gap: 0.75rem;
+}
+
+.admin-add-user-row .add-btn {
+	min-width: 130px;
+}
+
+.admin-course-form {
+	margin-bottom: 1rem;
+}
+
+.admin-course-row {
+	display: grid;
+	grid-template-columns: repeat(6, minmax(140px, 1fr));
+	gap: 0.75rem;
+}
+
+.admin-course-row .add-btn {
+	min-width: 130px;
+}
+
+.admin-inline-actions {
+	display: inline-flex;
+	gap: 0.5rem;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.admin-inline-actions .save-btn,
+.admin-inline-actions .modal-cancel,
+.admin-inline-actions .toggle-btn,
+.admin-inline-actions .delete-btn {
+	margin: 0;
+}
+
+.admin-course-edit-grid {
+	display: grid;
+	gap: 0.65rem;
+}
+
+.admin-course-edit-grid textarea.form-input {
+	resize: vertical;
+	font-family: inherit;
+}
+
+.course-description-inline {
+	font-size: 0.82rem;
+	color: var(--text-muted);
+	line-height: 1.5;
+	margin-top: 0.4rem;
+}
+
+.role-admin-dashboard .quick-stats .stat-box {
+	border-radius: 14px;
+	background: color-mix(in srgb, var(--bg-secondary) 82%, transparent);
+	border-color: color-mix(in srgb, var(--border) 85%, transparent);
+}
+
+@media (max-width: 1100px) {
+	.admin-add-user-row {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.admin-course-row {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	.admin-add-user-row {
+		grid-template-columns: 1fr;
+	}
+
+	.admin-course-row {
+		grid-template-columns: 1fr;
+	}
+}

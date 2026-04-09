@@ -1,0 +1,227 @@
+/* Instructor Dashboard */
+.no-courses-message, .no-assignments-message {
+  text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);
+  background: var(--bg-secondary); border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.course-stats { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0; }
+.stat { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--text-muted); }
+.stat-icon { font-size: 0.9rem; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--dash-accent), color-mix(in srgb, var(--dash-accent) 68%, #000 16%));
+  color: #fff; border: none; border-radius: 10px;
+  padding: 0.5rem 1rem; cursor: pointer; font-size: 0.82rem; font-weight: 600;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-primary.btn-wide {
+  padding: 0.7rem 2rem;
+  font-size: 0.9rem;
+}
+
+.btn-primary.btn-offset {
+  margin-top: 1rem;
+}
+
+.btn-secondary {
+  background: var(--input-bg); border: 1px solid var(--border);
+  color: var(--text-secondary); border-radius: 10px;
+  padding: 0.5rem 1rem; cursor: pointer; font-size: 0.82rem;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--text-primary); }
+
+.assignment-meta, .assignment-date, .assignment-file, .assignment-status-text {
+  color: var(--text-muted); font-size: 0.82rem; margin-top: 0.2rem;
+}
+
+.grading-form { display: flex; gap: 0.75rem; align-items: center; margin-top: 0.75rem; flex-wrap: wrap; }
+.grading-form input {
+  flex: 1; min-width: 200px;
+  background: var(--input-bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.6rem 1rem;
+  color: var(--text-primary); font-size: 0.875rem; outline: none;
+}
+.grading-form input:focus { border-color: var(--accent); }
+
+.submit-grade-btn {
+  background: var(--success); color: #fff; border: none;
+  border-radius: 10px; padding: 0.6rem 1.25rem;
+  cursor: pointer; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;
+}
+.submit-grade-btn:hover { opacity: 0.9; }
+
+.cancel-btn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-muted); border-radius: 10px;
+  padding: 0.6rem 1rem; cursor: pointer; font-size: 0.875rem; transition: all 0.2s;
+}
+.cancel-btn:hover { border-color: #6b7280; color: var(--text-primary); }
+
+.create-course-form { max-width: 560px; display: flex; flex-direction: column; gap: 1.1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; }
+.form-group input, .form-group textarea, .form-group select {
+  background: var(--input-bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.7rem 1rem;
+  color: var(--text-primary); font-size: 0.9rem;
+  outline: none; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
+.form-group textarea { resize: vertical; font-family: inherit; }
+.form-group select option { background: var(--bg-secondary); }
+
+.overview-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+.stat-card {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 14px; padding: 1.25rem;
+}
+.stat-card .stat-icon { font-size: 1.75rem; }
+.stat-info { display: flex; flex-direction: column; }
+.stat-number { font-size: 1.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+.students-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.student-card {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 14px; padding: 1.25rem; text-align: center;
+}
+.student-avatar { font-size: 2rem; margin-bottom: 0.5rem; }
+.student-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem; }
+.student-card p { font-size: 0.82rem; color: var(--text-muted); }
+.student-progress { color: var(--accent) !important; font-weight: 600 !important; margin-top: 0.3rem !important; }
+.contact-btn {
+  margin-top: 0.75rem; width: 100%;
+  background: var(--input-bg); border: 1px solid var(--border);
+  color: var(--text-secondary); border-radius: 10px;
+  padding: 0.5rem; cursor: pointer; font-size: 0.82rem; transition: all 0.2s;
+}
+.contact-btn:hover { border-color: var(--accent); color: var(--text-primary); }
+
+.grade-input-wrap { display: inline-block; }
+.grade-btn {
+  background: var(--dash-accent-soft);
+  border: 1px solid color-mix(in srgb, var(--dash-accent) 32%, transparent);
+  color: color-mix(in srgb, var(--dash-accent) 88%, #fff 3%);
+  padding: 0.4rem 0.8rem; border-radius: 8px;
+  cursor: pointer; font-size: 0.8rem; transition: all 0.2s;
+}
+.grade-btn:hover { background: color-mix(in srgb, var(--dash-accent-soft) 80%, #fff 4%); }
+
+.reset-courses-btn {
+  margin: 0.35rem 0 1rem;
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.reset-courses-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Module/Lesson Form Styles */
+.modules-section {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.modules-section > h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.module-form-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.module-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.module-form-header h4 {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-icon:hover { opacity: 1; }
+
+.lessons-section {
+  margin-top: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.lessons-section > h5 {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lesson-form-card {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-form-header span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.btn-small {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
+}

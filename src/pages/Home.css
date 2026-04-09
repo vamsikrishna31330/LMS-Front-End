@@ -1,0 +1,128 @@
+.home {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text-primary);
+}
+
+/* Navbar */
+.home-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navbar-bg, rgba(15,17,23,0.9));
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+.home-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 1.5rem; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.home-nav-logo { display: flex; align-items: center; gap: 0.5rem; }
+.home-nav-logo span:first-child { font-size: 1.4rem; }
+.home-nav-brand { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.home-nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+.home-theme-btn {
+  background: none; border: none; cursor: pointer;
+  font-size: 1.1rem; padding: 0.4rem; border-radius: 8px; transition: background 0.2s;
+}
+.home-theme-btn:hover { background: var(--input-bg); }
+.home-login-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff; border: none; border-radius: 20px;
+  padding: 0.5rem 1.25rem; cursor: pointer;
+  font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;
+}
+.home-login-btn:hover { opacity: 0.9; }
+
+/* Hero */
+.home-hero {
+  position: relative; overflow: hidden;
+  padding: 6rem 1.5rem 5rem; text-align: center;
+}
+.home-hero-glow {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px); opacity: 0.15; pointer-events: none;
+}
+.home-glow-1 { width: 600px; height: 600px; background: #6366f1; top: -200px; left: -100px; }
+.home-glow-2 { width: 400px; height: 400px; background: #8b5cf6; bottom: -100px; right: -50px; }
+.home-hero-content { position: relative; max-width: 720px; margin: 0 auto; }
+.home-hero-chip {
+  display: inline-block; background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.3); color: #818cf8;
+  padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.82rem;
+  font-weight: 600; margin-bottom: 1.5rem;
+}
+.home-hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.1;
+  color: var(--text-primary); margin-bottom: 1.25rem; letter-spacing: -0.02em;
+}
+.home-hero-gradient {
+  background: linear-gradient(135deg, #6366f1, #a78bfa, #38bdf8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.home-hero-sub {
+  font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;
+  margin-bottom: 2rem; max-width: 560px; margin-left: auto; margin-right: auto;
+}
+.home-hero-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.home-btn-primary {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff; border: none; border-radius: 12px;
+  padding: 0.85rem 2rem; cursor: pointer; font-size: 0.95rem;
+  font-weight: 700; transition: transform 0.2s, opacity 0.2s; letter-spacing: 0.01em;
+}
+.home-btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+.home-btn-primary.large { padding: 1rem 2.5rem; font-size: 1rem; }
+.home-btn-ghost {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-secondary); border-radius: 12px;
+  padding: 0.85rem 1.75rem; cursor: pointer; font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.home-btn-ghost:hover { border-color: var(--accent); color: var(--text-primary); }
+.home-hero-roles { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.home-role-pill {
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+  color: var(--text-muted); padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem;
+}
+
+/* Stats */
+.home-stats { background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.home-stats-inner {
+  max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;
+}
+.home-stat { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.home-stat-icon { font-size: 1.5rem; }
+.home-stat-value { font-size: 1.75rem; font-weight: 800; color: var(--text-primary); }
+.home-stat-label { font-size: 0.82rem; color: var(--text-muted); }
+
+/* Features */
+.home-features { padding: 5rem 1.5rem; }
+.home-section-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.home-section-tag { color: var(--accent); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+.home-section-title { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 800; color: var(--text-primary); margin-bottom: 3rem; }
+.home-features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+.home-feature-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.75rem; text-align: left;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.home-feature-card:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4); }
+.home-feature-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.home-feature-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; }
+.home-feature-card p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; }
+
+/* CTA */
+.home-cta-section { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.home-cta-inner { max-width: 600px; margin: 0 auto; padding: 5rem 1.5rem; text-align: center; }
+.home-cta-inner h2 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem; }
+.home-cta-inner p { color: var(--text-muted); margin-bottom: 2rem; }
+
+/* Footer */
+.home-footer { padding: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+
+@media (max-width: 640px) {
+  .home-stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .home-hero { padding: 4rem 1rem 3rem; }
+}
